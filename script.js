@@ -1,8 +1,14 @@
 function qwe(){
-    if(document.getElementsByClassName("input")[0].value === "782356"){
+  let counter = 0;
+  const password = "213546";
+  const stroke = document.getElementsByClassName("input")[0].value;
+    if(stroke === password){
       document.getElementsByClassName("title")[0].innerHTML = "ДА";
     }else {
-         document.getElementsByClassName("title")[0].innerHTML = "НЕТ)))";
+        for (let i = 0; i<stroke.length; i++){
+          password[i] === stroke[i] && counter++;
+        }
+         document.getElementsByClassName("title")[0].innerHTML = `НЕТ))), но кол-во угаданных позиций равно = ${counter}`;
     }
   }
   
